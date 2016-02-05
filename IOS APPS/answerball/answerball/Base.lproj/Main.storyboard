@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="answerball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone to get answer!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-Se-ViV">
+                                <rect key="frame" x="20" y="15" width="560" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="bCv-Pn-oG6">
+                                <rect key="frame" x="138" y="137" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="nRc-ch-EzA"/>
+                                    <constraint firstAttribute="height" constant="325" id="w8b-sf-bm5"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-fr-fST">
+                                <rect key="frame" x="173" y="221" width="254" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="PBT-Ku-O4r"/>
+                                    <constraint firstAttribute="width" constant="254" id="fW5-Cm-wke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2R-MM-VJq">
+                                <rect key="frame" x="240" y="541" width="121" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Get Answer!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAnswerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJb-cM-EUd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4366826038872097" green="0.32089072292408732" blue="0.55340544871794872" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7JQ-Se-ViV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="7Vw-di-vgl"/>
+                            <constraint firstItem="7JQ-Se-ViV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-5" id="DyG-dG-qbU"/>
+                            <constraint firstItem="7JQ-Se-ViV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="Hij-Oa-KGl"/>
+                            <constraint firstItem="bCv-Pn-oG6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBr-I1-LQa"/>
+                            <constraint firstItem="7JQ-Se-ViV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-5" id="Pze-4G-loY"/>
+                            <constraint firstItem="7JQ-Se-ViV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-5" id="R08-44-2mO"/>
+                            <constraint firstAttribute="bottom" secondItem="x2R-MM-VJq" secondAttribute="bottom" constant="20" symbolic="YES" id="VXC-5U-zXc"/>
+                            <constraint firstItem="x2R-MM-VJq" firstAttribute="centerX" secondItem="SDr-fr-fST" secondAttribute="centerX" id="Yhq-Ab-TAR"/>
+                            <constraint firstItem="SDr-fr-fST" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dvk-32-ZEJ"/>
+                            <constraint firstItem="7JQ-Se-ViV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e5l-7t-2vA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7JQ-Se-ViV" secondAttribute="trailing" id="k7j-zn-bxH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7JQ-Se-ViV" secondAttribute="leading" id="ltz-ie-M2i"/>
+                            <constraint firstItem="SDr-fr-fST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBT-PM-HB7"/>
+                            <constraint firstItem="bCv-Pn-oG6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sAn-eU-ZCu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerText" destination="SDr-fr-fST" id="m9A-Gp-lCl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="475"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball" width="345" height="345"/>
+    </resources>
+</document>
